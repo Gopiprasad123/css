@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div id="d1"></div>
+    <script>
+var students=['venky','sai','sandeep','sri','srikanth']
+// for(let i=0 ;i<=students.length-1;i++){
+// var newbtn=document.createElement("button");
+// newbtn.onclick=function(){alert(students[i])}
+// newbtn.innerHTML=students[i]
+// var a=document.getElementById("d1")
+// a.appendChild(newbtn)
+
+//}
+students.forEach(function(s){
+var nbtn=document.createElement('button')
+nbtn.onclick=function(){alert(s)}
+nbtn.innerHTML=s;
+var a =document.getElementById("d1");
+a.appendChild(nbtn)
+
+})
+
+
+    </script>
+</body>
+</html>

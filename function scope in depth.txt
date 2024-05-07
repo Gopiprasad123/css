@@ -1,0 +1,20 @@
+<body>
+   <div id="d1"></div>
+    <script>
+var students=['venky','sai','sandeep','sri','srikanth']
+for(let i=0 ;i<=students.length-1;i++){
+var newbtn=document.createElement("button");
+newbtn.onclick=function(){alert(students[i])}
+newbtn.innerHTML=students[i]
+var a=document.getElementById("d1")
+a.appendChild(newbtn)
+
+
+
+}
+
+
+
+    </script>
+</body>
+</html>

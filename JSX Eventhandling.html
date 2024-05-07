@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>conditional styleing</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="d5"></div>
+    <div id="d6"></div>
+    <div id="d7"></div>
+    <script type="text/babel">
+
+        //heading
+var jh1=<h1 style={{color:'red',backgroundcolor:'blue'}}>edupoly</h1>
+ReactDOM.render(jh1,document.getElementById("d5"))
+//array
+var ar=[10,200,46,67]
+var vh1= <ul style={{display:'flex'}}>
+            { ar.map((a)=>{
+                return <li style={{widtgh:'100px'}}>{a}</li>
+            })
+
+            }
+    </ul>
+    ReactDOM.render=(vh1,document.getElementById("d6"))
+
+//object type
+         var obj1=  {                   "color":"orgne",
+                        "type":"minivan",
+                        "registrationdate":new date(2017-6-23),
+                        "capacity":5
+                        }
+
+        var  x= object.keys(obj1)
+            console.log(x)
+            
+            var vh1=<ul> 
+                {
+                      Object.keys(obj1)map((a)=>{
+                        return <li style={{'width:100px'}}>{obj1[a]}</li>
+                      })
+                    }
+                      </ul>
+
+      ReactDOM.render=(vh1,document.getElementById("d7"))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

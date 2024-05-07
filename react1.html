@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<style>
+ .brd{ border: 2px solid salmon;}
+ .abc{border:3px solid salmon;background-color: aqua;}
+
+</style>
+
+</head>
+<body>
+    <h1 style="color: blue;">This is infinite</h1>
+<div id= "d1"> </div>
+<div id="d2"></div>
+<div id="d3"></div>
+<div id="d4">  </div>
+<div id="d5">  </div>
+<script type="text/babel">
+var nh1 = document.createElement("h1")
+nh1.innerHTML="this is infinite"
+nh1.style.color='green'
+nh1.className='brd abc'
+document.getElementById("d1").appendChild(nh1)
+var rh1=React.createElement("h1",{style:{color:"red"}},"this is cyber tower")
+ReactDOM.render(rh1,document.getElementById("d2"))
+
+var jh1=<h1 style={{color:'yellow'}} className='brd abc'>this is hyd  edupoly{10+78}</h1>
+ReactDOM.render(jh1,document.getElementById("d3"))
+
+var students=[ "deepika","alia","veena","roja"]
+
+var mylist =<ul>
+            { 
+                student.map(function(s){
+                    return<li>{s}</li>
+                })
+            }
+        </ul>
+    ReactDOM.render(mylist,document.getElementid("d4"))
+
+    var mycars=[
+
+                    { color:"blue",
+                        "type":"minivan",
+                        "registrationdate":new date(2017-6-23),
+                        "capacity":5
+                        },
+                        { color:"purple",
+                        "type":"minivan",
+                        "registrationdate":new date(2017-6-23),
+                        "capacity":9
+                        },
+                        { color:"silver",
+                        "type":"minivan",
+                        "registrationdate":new date(2017-6-23),
+                        "capacity":5
+                        },
+                        { color:"orgne",
+                        "type":"minivan",
+                        "registrationdate":new date(2017-6-23),
+                        "capacity":5
+                        }
+    var carstable= <table  border='2'> {
+
+                                    mycars.map(function(c){
+                                        return(<tr> 
+                                            <td>{c.color} </td>
+                                            <td> {c.type}</td>
+                                            <td> {c.capacity}</td> 
+                                            </tr>)
+                                    })
+
+                                }
+    
+        </table>
+    ReactDOM.render(carstable.document.getElementById("d5"))
+                  
+                
+console.dir(rh1)
+console.dir(jh1)
+console.dir(nh1)
+</script>
+
+</body>
+</html>
